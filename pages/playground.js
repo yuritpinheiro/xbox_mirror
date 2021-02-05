@@ -1,7 +1,7 @@
-export default function Home() {
-  return (
-    <div className="container">
-      <style jsx>{`
+export default function Playground() {
+    return (
+        <div className="container" >
+            <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -14,7 +14,7 @@ export default function Home() {
         
       `}</style>
 
-      <style jsx global>{`
+            <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -28,6 +28,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
-  )
-}
+        </div >
+    )
+};

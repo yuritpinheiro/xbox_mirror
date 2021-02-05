@@ -1,4 +1,4 @@
-export default function Background() {
+export default function Card() {
     return (
       <div className="container">
         Card

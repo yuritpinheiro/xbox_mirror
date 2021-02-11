@@ -17,7 +17,7 @@ export default function Playground() {
       `}</style>
 
 
-        <Card height='300px' width="300px" backgroundColor='#A52A2A' image='engrenagem.png'> </Card>
+        <Card height={300} width={300} backgroundColor='#A52A2A' image='engrenagem.png'> </Card>
         <style jsx global>{`
           html,
           body {

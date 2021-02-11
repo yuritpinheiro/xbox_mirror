@@ -1,19 +1,31 @@
 export default function Background() {
+
+    let rows = []
+    for (let i = 0; i < 16; i++) {
+        rows.push(i)
+    }
+
     return (
         <div className="container">
-
             <svg className="svg_container">
-                <defs>
-                </defs>
-                <radialGradient id="linear" cx="0%" cy="0%">
-                    <animate attributeName="cx" attributeType="HTML" values="15%;85%;15%;" dur="10s" repeatCount="indefinite"></animate>
-                    <animate attributeName="cy" attributeType="HTML" values="15%;85%;15%;" dur="10s" repeatCount="indefinite"></animate>
-                    <stop offset="0%" stop-color="#a21a2e" />
-                    <stop offset="50%" stop-color="#a21a2e" />
-                    <stop offset="100%" stop-color="#321213" />
-                </radialGradient>
-                <path id="sec" d="M 0 0 Q 0 540 960 540 Q 1920 540 1920 1080"
-                    stroke-width="80" fill="none" stroke="url(#linear)" />
+                {
+                    rows.map((i) => {
+                            return (
+                                <>
+                                    <radialGradient id={`linear${i}`} cx={`${200/16 * i}`} cy={`${200/16 * i}`}>
+                                        <animate attributeName="cx" attributeType="HTML" values={`${200/16 * i - 200}%;${200/16 * i + 100}%;`} dur="20s" repeatCount="indefinite"></animate>
+                                        <animate attributeName="cy" attributeType="HTML" values={`${200/16 * i - 200}%;${200/16 * i + 100}%;`} dur="20s" repeatCount="indefinite"></animate>
+                                        <stop offset="0%" stop-color="#a21a2e" />
+                                        <stop offset="50%" stop-color="#a21a2e" />
+                                        <stop offset="100%" stop-color="#321213" />
+                                    </radialGradient>
+                                    <path d={`M ${i * 80 - 640} ${i * -80 + 640} c 0 540 0 540 960 540 c 960 0 960 0 960 540`}
+                                        stroke-width="90" fill="none" stroke={`url(#linear${i})`} />
+                                </>
+                            );
+                            
+                    })
+                }
             </svg>
             <style jsx>
                 {`

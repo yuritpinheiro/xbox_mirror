@@ -1,7 +1,11 @@
+import Background from "../src/Background";
+import BackgroundDiv from "../src/Background/background_div";
+
 export default function Playground() {
-    return (
-        <div className="container" >
-            <style jsx>{`
+  return (
+    <div className="container" >
+      <Background />
+      <style jsx>{`
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
@@ -10,11 +14,9 @@ export default function Playground() {
           justify-content: center;
           align-items: center;
         }
-
-        
       `}</style>
 
-            <style jsx global>{`
+      <style jsx global>{`
         html,
         body {
           padding: 0;
@@ -28,6 +30,6 @@ export default function Playground() {
           box-sizing: border-box;
         }
       `}</style>
-        </div >
-    )
+    </div >
+  )
 };

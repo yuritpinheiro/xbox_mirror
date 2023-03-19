@@ -10,8 +10,6 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-
-        
       `}</style>
 
       <style jsx global>{`
